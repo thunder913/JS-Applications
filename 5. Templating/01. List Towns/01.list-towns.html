@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List Towns</title>
+    <!--Getting the handlebars module either from node_modules or from the given folder-->
+    <script src="../handlebars.min.js"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="#" class="content">
+        <label for="towns">Towns</label>
+        <input id="towns" type="text" />
+        <button id="btnLoadTowns">Load</button>
+    </form>
+    <div id="root">
+        <ul>
+
+        </ul>
+    </div>
+    <script id="towns-template" type="text/x-handlebars-template">
+        {{#each towns}}
+            {{#if this}}
+            <li>{{this}}</li>
+            {{/if}}
+        {{/each}}
+    </script>
+</body>
+<script src="./app.js"></script>
+
+</html>

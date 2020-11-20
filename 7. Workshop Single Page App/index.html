@@ -1,40 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/team.css">
+    <link rel="stylesheet" type="text/css" href="css/details.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Team Managers App</title>
+  </head>
+  <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/styles.css">
-    <link rel="icon" type="image/png" href="./public/favicon.png">
-    <title>Shoe Shelf</title>
-</head>
-
-<body>
-    <main>
+      <div id="infoBox" class="notification" disabled></div>
+      <div id="errorBox" class="notification" disabled></div>
+      <div id="main">
         
-    </main>
-  
-</body>
+      </div>
 
-<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyBkD2P23gPPoIPfXTkhJS-eLg5wviKt1-Q",
-    authDomain: "shoeshelf-ffe3a.firebaseapp.com",
-    databaseURL: "https://shoeshelf-ffe3a.firebaseio.com",
-    projectId: "shoeshelf-ffe3a",
-    storageBucket: "shoeshelf-ffe3a.appspot.com",
-    messagingSenderId: "752819347537",
-    appId: "1:752819347537:web:8bf840b4b19d4d5f221870"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
-<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
-<script src= "node_modules/handlebars/dist/handlebars.min.js"></script>
-<script src= "node_modules/jquery/dist/jquery.min.js"></script>
-<script src = "node_modules/sammy/lib/sammy.js"></script>
-<script src = "node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
-<script src="app.js"></script>
-
+      <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyByi4IIaEKXk5PFscadr7aZUMo0fYZUXXg",
+          authDomain: "teammanager-41033.firebaseapp.com",
+          databaseURL: "https://teammanager-41033.firebaseio.com",
+          projectId: "teammanager-41033",
+          storageBucket: "teammanager-41033.appspot.com",
+          messagingSenderId: "655710680379",
+          appId: "1:655710680379:web:4d80481a7777cb43acb31e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
 </html>

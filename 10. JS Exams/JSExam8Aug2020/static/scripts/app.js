@@ -6,6 +6,7 @@ const router = Sammy('main', function(){
 
     this.get('/home',async function(context){
         let movies = await fetch(`${baseUrl}.json`).then((data)=> data.json());
+        let searchKey = context.params.search;
         loadPartials(context)
             .then(function(){
                 if (context.loggedIn) {
@@ -16,7 +17,14 @@ const router = Sammy('main', function(){
                             let uid = key;
                             let title = movies[key].title;
                             let image = movies[key].image;
+                            if (searchKey) {
+                                let contains = title.toLowerCase().includes(searchKey.toLowerCase());
+                                if (contains) {
+                                    moviesArr.push({uid, title, image});
+                                }
+                            }else{
                             moviesArr.push({uid, title, image});
+                            }
                         }
                         context.movies = moviesArr;
                     }
@@ -139,6 +147,12 @@ const router = Sammy('main', function(){
                     context.redirect(`/details/${id}`);
                 })
     })
+
+    this.post('/home?search=:name', function(){
+        let name = context.params.name;
+        console.log(name);
+        this.redirect('/home');
+    })
 })
 
 
@@ -190,3 +204,4 @@ function showSuccess(message){
         successNotification.style.display = 'none';
     }, 2500);
 }
+

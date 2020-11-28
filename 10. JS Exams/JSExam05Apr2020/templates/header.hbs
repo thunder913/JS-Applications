@@ -1,0 +1,15 @@
+    <header>
+        {{#if logged}}
+        <h1><a class="home" href="/home">SoftWiki</a></h1>
+        {{else}}
+        <h1><a class="home" href="/login">SoftWiki</a></h1>
+        {{/if}}
+        <nav class="nav-buttons">
+            {{#if logged}}
+            <a href="/create">Create</a>
+            <a href="/logout">Logout</a>
+            {{else}}
+            <a href="/register">Register</a>
+            {{/if}}
+        </nav>
+    </header>

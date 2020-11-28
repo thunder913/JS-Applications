@@ -1,0 +1,19 @@
+    {{> header}}
+    
+    <div class="content">
+        {{#each types}}
+        <section class="js">
+            <h2>{{type}}</h2>
+            <div class="articles">
+                {{#if articles}}
+                {{#each articles}}
+                    {{> article title=title content=content uid=uid }}
+                {{/each}}
+                {{else}}
+                    <h3 class="no-articles">No articles yet</h3>
+                {{/if}}
+            </div>
+        </section>
+        {{/each}}
+    </div>
+    {{> footer}}

@@ -1,0 +1,27 @@
+{{> header}}
+
+<!-- Details Dashboard  -->
+<section id="viewMydestinations">
+    <h3>Your destinations</h3>
+    {{#each destinations}}
+    <div class="destination-ticket">
+        <div class="destination-left">
+            <img src="{{imgUrl}}"
+                alt="">
+        </div>
+        <div class="destination-right">
+            <div>
+                <h3>{{destination}}</h3><span>{{departureDate}}</span>
+            </div>
+            <div>
+                to {{city}}
+            </div>
+            <p>{{duration}} days </p>
+            <a href="/remove/{{id}}" class="remove">REMOVE</a>
+            <a href="/details/{{id}}" class="details">Details</a>
+        </div>
+    </div>
+    {{/each}}
+</section>
+
+{{> footer}}

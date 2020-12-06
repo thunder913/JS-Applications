@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destinations</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Notifications -->
+    <div>
+        <div class="notification loadingBox">
+            Loading …
+        </div>
+        <div class="notification infoBox">
+            Info
+        </div>
+        <div class="notification errorBox">
+            Error: destination name can't be empty!
+        </div>
+    </div>
+        <div id="container">
+
+    </div>
+</body>
+    <!-- Firebase -->
+    <script src="./node_modules/firebase/firebase.js"></script>
+
+    <!-- Modules -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyChGBwkdUoHQQOVF1C9pGf30MMpU7wes18",
+        authDomain: "destinationsproject-32a99.firebaseapp.com",
+        projectId: "destinationsproject-32a99",
+        storageBucket: "destinationsproject-32a99.appspot.com",
+        messagingSenderId: "47896577269",
+        appId: "1:47896577269:web:49811a43acb7e141d8f1bc"
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+    <!-- Scripts -->
+    <script src="./scripts/app.js" type="module"></script>
+
+</html>
